@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Главная</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -25,7 +26,7 @@
             </a></li>
           <li class="menu item">
             <a class=menu-link href="#">
-              <span class="visually-hidden">Хочу сюда</span></a></li>
+              <span class="button medium">Хочу сюда</span></a></li>
         </ul>
       </nav>
     </header>
@@ -42,31 +43,31 @@
       </section>
       <section class="reasons">
         <ul class="reasons-list">
-          <li class="reasons-list-item">
-          <div>
+          <li class="reasons-list-picture">
+          <div class="reasons-list-item-picture">
             <h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <img class="photo" src="images/photo-1.jpg" width="800" height="385" alt="Здание на фоне гор">
           </li>
 
-          <li class="reasons-list-item">
+          <li class="reasons-list-item-blue">
            <h3>Небольшая площадь</h3>
            <p>Все достопримечательности находятся очень близко</p>
           </li>
 
-          <li class="reasons-list-item">
+          <li class="reasons-list-item-gray">
             <h3>Красивая дорога</h3>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
 
-          <li class="reasons-list-item">
+          <li class="reasons-list-item-blue">
             <h3>Мало туристов</h3>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
 
-          <li class="reasons-list-item">
-            <div>
+          <li class="reasons-list-picture">
+            <div class="reasons-list-item-picture">
               <h3>Там есть мост дьявола</h3>
               <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
@@ -106,15 +107,15 @@
       <section class="hotel search">
         <h2>Заинтересовались?</h2>
         <h4>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</h4>
-        <a href="#">Поиск гостиницы в Седоне</a>
+        <a href="#" class="button">Поиск гостиницы в Седоне</a>
       </section>
 
       <section class="subscribe">
-        <h2>Подпишитесь на рассылку</h2>
-        <h4>Только полезная информация и никакого спама, честное бойскаутское!</h4>
+        <h2 class="subscribe-text">Подпишитесь на рассылку</h2>
+        <h4 class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</h4>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/"  method="post">
           <input class="field" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
-          <button class="subscribe button" type="submit">Подписаться</button>
+          <button class="button blue" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
