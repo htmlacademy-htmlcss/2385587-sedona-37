@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+  color: #000000;
+  background-color: white;
+}
+
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+h2{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.slogan {
+  background-image: url("../images/mountains.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 485px;
+  width: 1200px;
+}
+
+
+.subscribe {
+  background-image: url("../images/Subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 1200px;
+  height: 414.86px;
+
+}
+
+.catalog {
+  background-image: none;
+  background-color: white;
+}
+
+/* Buttons */
+
+.button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+  color: white;
+  padding: 8px 50px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.blue {
+  background-image: none;
+  background-color: #82B3D3;
+
+}
+
+.medium {
+  padding: 8px 34px;
+}
+
+.small {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 20px;
+}
+
+.button-default {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+}
+
+.subscribe-text {
+  color: white;
+}
+
+.phone-link {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.subscribe-email {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.filters {
+  background-image: url("../images/filters-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  color: white;
+}
+
+.filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.checkbox-item, .radio-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.rating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #82B3D3;
+
+}
+
+.hotel-number {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.card-list-item {
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  width: 340px;
+  height: 438px;
+  padding: 20px;
+}
+
+.breadcrumbs-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}

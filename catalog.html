@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Гостиницы</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="main-header">
       <a href="index.html" aria-current="page"><img src="images/logo.svg" width="140" height="70" alt="Логотип Седона"></a>
       <nav class="navigation-list">
         <ul>
-          <li class="navigation-item"><a class=navigation-link href="#">Главная</a></li>
-          <li class="navigation-item"><a class=navigation-link href="catalog.html">О Седоне</a></li>
-          <li class="navigation-item"><a class=navigation-link href="#">Гостиницы</a></li>
+          <li class="navigation-item"><a class=navigation-link href="index.html">Главная</a></li>
+          <li class="navigation-item"><a class=navigation-link href=#>О Седоне</a></li>
+          <li class="navigation-item"><a class=navigation-link href="catalog.html">Гостиницы</a></li>
         </ul>
 
         <ul class="menu">
@@ -25,7 +26,7 @@
             </a></li>
           <li class="menu item">
             <a class=menu-link href="#">
-              <span class="visually-hidden">Хочу сюда</span></a></li>
+              <span class="button medium">Хочу сюда</span></a></li>
         </ul>
       </nav>
     </header>
@@ -44,39 +45,39 @@
         </ul>
 
         <form class="catalog-filters">
-          <fieldset class="checkbox group">
+          <fieldset class="checkbox-group">
             <legend class="filter-title">Инфраструктура:</legend>
             <ul class="checkbox">
-              <li class="checkbox item"><label><input type="checkbox" name="sweeming-pools" checked value="Бассейн">Бассейн</label></li>
-              <li class="checkbox item"><label><input type="checkbox" name="parking" checked value="Парковка">Парковка</label></li>
-              <li class="checkbox item"><label><input type="checkbox" name="wi-fi" checked value="Wi-Fi">Wi-Fi</label></li>
+              <li class="checkbox-item"><label><input type="checkbox" name="sweeming-pools" checked value="Бассейн">Бассейн</label></li>
+              <li class="checkbox-item"><label><input type="checkbox" name="parking" checked value="Парковка">Парковка</label></li>
+              <li class="checkbox-item"><label><input type="checkbox" name="wi-fi" checked value="Wi-Fi">Wi-Fi</label></li>
             </ul>
           </fieldset>
 
           <fieldset class="radio group">
             <legend class="filter-title">Тип жилья:</legend>
             <ul class="radio">
-              <li class="radio item"><label><input type="radio" name="product-group" checked value="hotel">Гостиница</label></li>
-              <li class="radio item"><label><input type="radio" name="product-group" checked value="motel">Мотель</label></li>
-              <li class="radio item"><label><input type="radio" name="product-group" checked value="appartments">Апартаменты</label></li>
+              <li class="radio-item"><label><input type="radio" name="product-group" checked value="hotel">Гостиница</label></li>
+              <li class="radio-item"><label><input type="radio" name="product-group" checked value="motel">Мотель</label></li>
+              <li class="radio-item"><label><input type="radio" name="product-group" checked value="appartments">Апартаменты</label></li>
             </ul>
           </fieldset>
 
           <fieldset class="range">
-            <label for="min-price">Стоимость, р</label>
+            <label for="filter-title">Стоимость, ₽</label>
             <input type="number" id="min-price" name="min-price" min="0" max="10000" step="1" placeholder="от">
             <span>-</span>
             <input type="number" id="max-price" name="max-price" min="0" max="10000" step="1" placeholder="до">
             <input type="range" id="price-range" name="price-range" min="0" max="10000" step="1">
           </fieldset>
-          <input type="submit" value="Отправить">
-          <button class="reset-btn">Сбросить</button>
+          <input type="submit" class="button small" value="Применить">
+          <button class="button-default">Сбросить</button>
         </form>
       </section>
 
-      <section class="catalog">
+      <section class="hotel-catalog">
         <h2 class="visually-hidden">Каталог гостиниц</h2>
-        <p>Найдено гостиниц:38</p>
+        <p class="hotel-number">Найдено гостиниц:38</p>
 
         <select class="select-filter" aria-label="Сортировка">
           <option class="select-filter-option">Сначала дешевые</option>
@@ -84,14 +85,14 @@
           <option class="select-filter-option">Сначала популярные</option>
         </select>
 
-        <div class="card-switch">
-          <a class="button" href="#">
+        <div class="switcher">
+          <a class="switcher-card" href="#">
             <span class="visually-hidden">Плиткой</span>
           </a>
-          <a class="button" href="#">
+          <a class="switcher-card" href="#">
             <span class="visually-hidden">На ширину экрана</span>
           </a>
-          <a href="#" class="button">
+          <a href="#" class="switcher-card">
             <span class="visually-hidden">Списком</span>
           </a>
         </div>
@@ -105,9 +106,9 @@
                 <p>Гостиница</p>
                 <p>От 4000 ₽</p>
 
-                <a class="more-btn" href="#">Подробнее</a>
-                <button class="favorite -btn">В избранное</button>
-                <button class="favorite-btn active hidden">В избранном</button>
+                <a class="button small" href="#">Подробнее</a>
+                <button class="button small blue">В избранное</button>
+                <button class="button small visually-hidden">В избранном</button>
 
                 <div class="stars">
                   <span class="visually-hidden">4 звезды</span>
@@ -128,9 +129,9 @@
                 <p>Гостиница</p>
                 <p>От 5000 ₽</p>
 
-                <a class="more-btn" href="#">Подробнее</a>
-                <button class="favorite-btn">В избранное</button>
-                <button class="favorite-btn active hidden">В избранном</button>
+                <a class="button small" href="#">Подробнее</a>
+                <button class="button small blue">В избранное</button>
+                <button class="button small visually-hidden">В избранном</button>
 
                 <div class="stars">
                   <span class="visually-hidden">4 звезды</span>
@@ -151,9 +152,9 @@
                 <p>Гостиница</p>
                 <p>От 2500 ₽</p>
 
-                <a class="more-btn" href="#">Подробнее</a>
-                <button class="favorite -btn">В избранное</button>
-                <button class="favorite-btn active hidden">В избранном</button>
+                <a class="button small" href="#">Подробнее</a>
+                <button class="button small blue">В избранное</button>
+                <button class="button small visually-hidden">В избранном</button>
 
                 <div class="stars">
                   <span class="visually-hidden">3 звезды</span>
@@ -173,9 +174,9 @@
                 <p>Гостиница</p>
                 <p>От 1500 ₽</p>
 
-                <a class="more-btn" href="#">Подробнее</a>
-                <button class="favorite -btn">В избранное</button>
-                <button class="favorite-btn active hidden">В избранном</button>
+                <a class="button small" href="#">Подробнее</a>
+                <button class="button small blue">В избранное</button>
+                <button class="button small visually-hidden">В избранном</button>
 
                 <div class="stars">
                   <span class="visually-hidden">2 звезды</span>
@@ -202,12 +203,12 @@
 
       </section>
 
-      <section class="subscribe">
+      <section class="subscribe catalog">
         <h2>Подпишитесь на рассылку</h2>
         <h4>Только полезная информация и никакого спама, честное бойскаутское!</h4>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/"  method="post">
           <input class="field" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
-          <button class="subscribe button" type="submit">Подписаться</button>
+          <button class="button blue" type="submit">Подписаться</button>
       </form>
       </section>
     </main>
