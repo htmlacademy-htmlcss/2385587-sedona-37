@@ -85,6 +85,7 @@ main {
   margin: 0 auto;
 }
 
+
 .menu {
   width: 312px;
   list-style: none;
@@ -208,6 +209,8 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+  display: block;
+  box-sizing: border-box;
 }
 
 .blue {
@@ -227,13 +230,14 @@ p {
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
-  margin: 20px 14px;
+  margin-left: 20px;
 }
 
 .small {
   font-size: 16px;
   line-height: 20px;
-  padding: 8px 20px;
+  padding: 8px;
+  box-sizing: content-box
 }
 
 .button-default {
@@ -289,8 +293,8 @@ p {
 }
 
 .catalog-filters {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto auto;
   width: 1060px;
   margin-top: 40px;
   justify-content: space-between;
@@ -311,8 +315,9 @@ p {
 }
 
 .checkbox-radio {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 70px;
 }
 
 .radio, .checkbox {
@@ -327,7 +332,6 @@ p {
 }
 
 .checkbox-group, .radio-group {
-  margin-right: 40px;
   border: none;
   padding: 0;
 }
@@ -338,14 +342,20 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   border: none;
+  padding: 0;
+  margin: 0;
+
 }
 
 .right-form {
-  display: flex;
+  display: grid;
   gap: 70px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  grid-template-columns: auto auto;
+
+}
+
+.right-form > * {
+  align-self: end;
 }
 
 .price {
@@ -379,6 +389,11 @@ p {
   line-height: 24px;
   margin-bottom: 32px;
 }
+
+#price-range {
+  height: 20px;
+}
+
 
 .field {
   padding: 12px 20px;
@@ -466,27 +481,41 @@ p {
 }
 
 .card-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 40px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+
 }
 
 .card-list-item {
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-  width: 340px;
-  height: 438px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: 1fr 1fr;
   box-sizing: border-box;
-  gap: 16px;
+  gap: 16px 20px;
+  max-width: 340px;
+}
+
+
+.text-1 {
+  grid-column: 1;
+  justify-self:left;
+}
+
+.text-2 {
+  grid-column: 2;
+  justify-self:right;
 }
 
 .card-img {
   margin: 0 auto;
   display: block;
+  grid-column: 1/-1;
 }
 
 .card-text, .buttons {
@@ -500,6 +529,9 @@ p {
 .hotel-name {
   padding: 0;
   margin:0;
+  grid-row: 2;
+  grid-column: 1/-1;
+  justify-self:left;
 }
 
 .rating {
@@ -511,6 +543,8 @@ p {
   background: #F2F2F2;
   border-radius: 4px;
   padding: 9px 23px 8px 22px;
+  grid-column: 2;
+  grid-row: 5;
 }
 
 .breadcrumbs {
@@ -519,7 +553,7 @@ p {
   padding: 0;
   margin-top: 8px;
   margin-bottom: 0;
-  align-items: ;
+  align-items:
 }
 
 .breadcrumbs-link {
@@ -621,6 +655,10 @@ p {
   background-repeat: repeat-x;
   width: 84px;
   height: 17px;
+  grid-column: 1;
+  grid-row: 5;
+  display: inline;
+  align-self: center;
 }
 
 .stars-2 {
@@ -628,6 +666,10 @@ p {
   background-repeat: repeat-x;
   width: 63px;
   height: 17px;
+  grid-column: 1;
+  grid-row: 5;
+  display: inline;
+  align-self: center;
 }
 
 .stars-3 {
@@ -635,16 +677,12 @@ p {
   background-repeat: repeat-x;
   width: 42px;
   height: 17px;
+  grid-column: 1;
+  grid-row: 5;
+  display: inline;
+  align-self: center;
 }
 
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-}
 
 .hotel-rating {
   display: flex;
@@ -652,6 +690,7 @@ p {
   width: 300px;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .title {
@@ -706,12 +745,14 @@ p {
   align-items:center;
   padding: 0px;
   height: 49px;
-  margin-bottom: 40px;
 }
 
 
 .hotel-catalog {
   margin: 50px 70px 60px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 
