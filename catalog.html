@@ -12,7 +12,7 @@
         <nav class="navigation">
           <a class="logo-link" href="index.html" aria-current="page"><img src="images/logo.svg" width="140" height="70" alt="Логотип Седона"></a>
           <ul class="navigation-list">
-            <li class="navigation-item"><a class=navigation-link href="#">Главная</a></li>
+            <li class="navigation-item"><a class=navigation-link href="index.html">Главная</a></li>
             <li class="navigation-item current"><a class=navigation-link href="catalog.html">О Седоне</a></li>
             <li class="navigation-item"><a class=navigation-link href="#">Гостиницы</a></li>
           </ul>
@@ -26,6 +26,7 @@
                 <span class="visually-hidden">Поиск</span></a></li>
             <li class="menu-item">
               <a class=menu-item-link href="#">
+                <span class="circle">12</span>
                 <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.29282 17C8.99282 17 8.69282 16.9 8.49282 16.6C3.09282 10.5 1.79282 9.1 1.49282 8.7C0.792822 7.8 0.392822 6.6 0.392822 5.4C0.392822 2.4 2.79282 0 5.89282 0C7.19282 0 8.39282 0.5 9.39282 1.3C10.3928 0.5 11.6928 0 12.8928 0C15.8928 0 18.3928 2.4 18.3928 5.4C18.3928 6.7 17.8928 7.9 17.0928 8.8L10.0928 16.7C9.89282 16.9 9.69282 17 9.29282 17ZM3.29282 7.5C3.59282 7.9 6.79282 11.5 9.39282 14.4L15.5928 7.4C16.0928 6.9 16.2928 6.2 16.2928 5.4C16.2928 3.6 14.7928 2.1 12.9928 2.1C11.9928 2.1 10.9928 2.6 10.2928 3.4C9.99282 3.7 9.69282 3.8 9.39282 3.8C9.09282 3.8 8.79282 3.6 8.59282 3.4C7.89282 2.6 6.89282 2.1 5.89282 2.1C4.09282 2.1 2.59282 3.6 2.59282 5.4C2.49282 6.3 2.89282 7 3.29282 7.5C3.19282 7.5 3.19282 7.5 3.29282 7.5Z" fill="black"/>
                   </svg>
@@ -65,18 +66,54 @@
                 <fieldset class="checkbox-group">
                   <legend class="filter-title">Инфраструктура:</legend>
                   <ul class="checkbox">
-                    <li class="checkbox-item"><label><input type="checkbox" name="sweeming-pools" checked value="Бассейн">Бассейн</label></li>
-                    <li class="checkbox-item"><label><input type="checkbox" name="parking" checked value="Парковка">Парковка</label></li>
-                    <li class="checkbox-item"><label><input type="checkbox" name="wi-fi" checked value="Wi-Fi">Wi-Fi</label></li>
+                    <li class="checkbox-item">
+                      <label>
+                        <input type="checkbox" name="sweeming-pools" checked value="Бассейн">
+                        <span class="custom-checkbox"></span>
+                        Бассейн
+                      </label>
+                    </li>
+                    <li class="checkbox-item">
+                      <label>
+                        <input type="checkbox" name="parking" checked value="Парковка">
+                        <span class="custom-checkbox"></span>
+                        Парковка
+                      </label>
+                    </li>
+                    <li class="checkbox-item">
+                      <label>
+                        <input type="checkbox" name="wi-fi" checked value="Wi-Fi">
+                        <span class="custom-checkbox"></span>
+                        Wi-Fi
+                      </label>
+                    </li>
                   </ul>
                 </fieldset>
 
                 <fieldset class="radio-group">
                   <legend class="filter-title">Тип жилья:</legend>
                   <ul class="radio">
-                    <li class="radio-item"><label><input type="radio" name="product-group" checked value="hotel">Гостиница</label></li>
-                    <li class="radio-item"><label><input type="radio" name="product-group" checked value="motel">Мотель</label></li>
-                    <li class="radio-item"><label><input type="radio" name="product-group" checked value="appartments">Апартаменты</label></li>
+                    <li class="radio-item">
+                      <label>
+                        <input type="radio" name="product-group" value="hotel" checked>
+                        <span class="custom-radio"></span>
+                        Гостиница
+                      </label>
+                    </li>
+                    <li class="radio-item">
+                      <label>
+                        <input type="radio" name="product-group" value="motel">
+                        <span class="custom-radio"></span>
+                        Мотель
+                      </label>
+                    </li>
+                    <li class="radio-item">
+                      <label>
+                        <input type="radio" name="product-group" value="appartments">
+                        <span class="custom-radio"></span>
+                        Апартаменты
+                      </label>
+                    </li>
                   </ul>
                 </fieldset></div>
 
@@ -84,10 +121,19 @@
                 <fieldset class="range">
                     <label for="filter-title">Стоимость, ₽</label>
                     <div class="price">
-                      <input type="number" id="min-price" name="min-price" min="0" max="10000" step="1" placeholder="от">
-                      <input type="number" id="max-price" name="max-price" min="0" max="10000" step="1" placeholder="до">
+                      <input type="number" id="min-price" name="min-price" min="0" max="999" step="1" placeholder="0">
+                      <input type="number" id="max-price" name="max-price" min="0" max="10000" step="1" placeholder="9000">
                     </div>
-                    <input type="range" id="price-range" name="price-range" min="0" max="10000" step="1">
+                    <div class="filter-slider">
+                      <div class="slider-bar" style="left: 0; width: 226px">
+                        <button class="slider-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="slider-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
                 </fieldset>
 
                 <div class="input-buttons">
