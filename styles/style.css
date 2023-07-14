@@ -132,11 +132,14 @@ main {
 }
 
 
-
-h1 {
+.title{
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
 }
 
 h2{
@@ -148,7 +151,7 @@ h2{
   padding: 0;
 }
 
-h4 {
+.addtl-info {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -165,12 +168,13 @@ h3 {
   margin: 0;
 }
 
-p {
+.description {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   margin:0;
   padding: 0;
+  color: #333333;
 }
 
 .slogan {
@@ -193,8 +197,9 @@ p {
   background-size: cover;
   width: 100%;
   height: 414.86px;
-  padding: 96px  258px 104px;
+  padding: 96px 258px 104px;
   box-sizing: border-box;
+
 }
 
 .subscribe catalog {
@@ -206,7 +211,7 @@ p {
   margin-bottom: 54px;
 }
 
-.about-text-button {
+.about-text-button, .subscribe-text {
   margin-bottom: 54px;
 }
 
@@ -342,15 +347,15 @@ p {
   color: #756157;
 }
 
-.phone-link:active,.logo-link:active {
+.phone-link:active,.footer-logo-link:active svg path {
   color: #7561574D;
 }
 
-.logo-link:hover svg path, .logo-link-svg:focus svg path {
+.footer-logo-link:hover svg path, .footer-logo-link:focus svg path {
   fill: #756157;
 }
 
-.logo-link:active svg path {
+.footer-logo-link:active svg path {
   fill: #7561574D;
 }
 
@@ -451,7 +456,7 @@ p {
   margin-bottom: 36px;
 }
 
-#min-price, #max-price {
+.min-price, .max-price {
   width: 143px;
   border-radius: 4px 0px 0px 4px;
   background-color: #F2F2F2;
@@ -462,12 +467,12 @@ p {
   height: 48px;
 }
 
-#max-price {
+.max-price {
   border-radius: 0px 4px 4px 0px;
 }
 
-#min-price::placeholder,
-#max-price::placeholder {
+.min-price::placeholder,
+.max-price::placeholder {
   color: var(--basic-black, #000);
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -733,7 +738,7 @@ p {
 
 .reasons-list-item, .advantages-list-item {
   width: 400px;
-  padding: 102px 85px;
+  padding: 103px 85px;
   background:rgba(131, 179, 211, 0.12);
   box-sizing: border-box;
   height: 385px;
@@ -741,6 +746,10 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 30px
+}
+
+.advantages-list-item {
+  padding: 80px 85px;
 }
 
 
@@ -751,6 +760,10 @@ p {
 
 .bridge {
   background: #82B3D3;
+  color: #FFFFFF;
+}
+
+.white {
   color: #FFFFFF;
 }
 
@@ -819,12 +832,6 @@ p {
   align-items: center;
   justify-content: space-between;
 
-}
-
-.title {
-  margin: 0;
-  padding: 0;
-  text-align: left;
 }
 
 
@@ -1058,12 +1065,6 @@ date-input-field:not(:placeholder-shown),
 
 .date-input-field:hover {
   outline: none;
-}
-
-.date-input-field::placeholder,
-.date-input-field:hover,
-.date-input-field:focus,{
-  color: #000006;
 }
 
 .price input[type="number"]::placeholder,
