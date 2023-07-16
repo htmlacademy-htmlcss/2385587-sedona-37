@@ -5,6 +5,8 @@
 * Browsers: last 4 version
 */
 
+
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -168,6 +170,7 @@ main {
 .menu-link {
   text-decoration: none;
   display: block;
+  margin-left: 20px;
 }
 
 .navigation-link {
@@ -346,7 +349,6 @@ main {
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
-  margin-left: 20px;
 }
 
 .button:hover,.button:focus {
@@ -687,6 +689,10 @@ main {
   height: 52px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .subscribe-form {
@@ -1281,6 +1287,18 @@ main {
 
 }
 
+.tile {
+  background-image: url('../images/icons/mode1.svg');
+}
+
+.full-width {
+  background-image: url('../images/icons/mode2.svg');
+}
+
+.list-view {
+  background-image: url('../images/icons/mode3.svg');
+}
+
 .switcher-card:first-child {
   border: 2px solid #000000;
 }
@@ -1302,10 +1320,9 @@ main {
   height: 100%;
   width: 100%;
   display: block;
-  padding: 14px 12px;
-
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 
 .search {
   display: -webkit-box;
@@ -1503,6 +1520,10 @@ main {
   padding-left: 20px;
 }
 
+.field {
+
+}
+
 date-input-field:not(:-moz-placeholder-shown), .price input[type="number"]:not(:-moz-placeholder-shown) {
   outline: 2px solid #000000;
   color: #000000;
@@ -1696,9 +1717,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
-.checkbox-item input[type="checkbox"] {
-   display: none;
+
+.checkbox-item input[type="checkbox"], .radio-item input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
+
 
 .custom-checkbox {
   display: inline-block;
@@ -1750,10 +1778,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
-.radio-item input[type="radio"] {
-  display: none;
-}
-
 .custom-radio {
   position: relative;
   display: inline-block;
@@ -1782,10 +1806,6 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: background-color 0.2s;
 }
 
-.radio-item input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-}
 
 .radio-item input[type="radio"]:checked + .custom-radio::before {
   background-color: #3F5E72;
@@ -1806,6 +1826,10 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.checkbox-item:hover label, .radio-item:hover label {
+  opacity: 0.6;
 }
 
 .filter-list-cost {
