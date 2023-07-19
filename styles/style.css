@@ -247,7 +247,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("../images/Subscribe.jpg");
+  background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -413,8 +413,9 @@ main {
   color: #756157;
 }
 
-.phone-link:active,.footer-logo-link:active svg path {
-  color: #7561574D;
+.phone-link:active svg path,.footer-logo-link:active svg path {
+  color: #756157;
+  opacity: 0.3;
 }
 
 .footer-logo-link:hover svg path, .footer-logo-link:focus svg path {
@@ -424,7 +425,6 @@ main {
 .footer-logo-link:active svg path {
   fill: #7561574D;
 }
-
 
 .subscribe-email {
   font-weight: 400;
@@ -1072,13 +1072,15 @@ main {
 }
 
 .social-list-item a:hover svg path,
-.social-list-item a:focus {
+.social-list-item a:focus svg path{
   fill: #68A2CA;
 }
 
-.social-list-item a:active {
-  color: #68A2CA4D;
+.social-list-item a:active svg path{
+  color: #68A2CA;
+  opacity: 0.3;
 }
+
 
 
 .reasons-list {
