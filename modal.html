@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Главная</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
     <div class="page-wrapper">
@@ -178,12 +179,12 @@
               <div class="dates">
                 <div class="date-input calendar">
                   <label for="date-check-in">Дата Заезда:</label>
-                  <input class="date-input-field field" type="text" id="date-check-in" name="date-check-in" value="27 апреля 2020">
+                  <input class="date-input-field field" type="text" id="date-check-in" name="date-check-in" value="27 апреля 2020" required>
                   <span class="date-error">Мы не можем отправить вас в прошлое.</span>
                 </div>
                 <div class="date-input calendar">
                   <label for="date-check-out">Дата Выезда:</label>
-                  <input class="date-input-field field" type="text" id="date-check-out" name="date-check-out" value="1 сентября 2023">
+                  <input class="date-input-field field" type="text" id="date-check-out" name="date-check-out" value="1 сентября 2023" required>
                   <span class="date-accept">На эти даты есть свободные номера. Пока есть.</span>
                 </div>
               </div>
@@ -193,7 +194,7 @@
                   <div class="input-container">
                     <button class="btn-minus" type="button"><span class="visually-hidden">Уменьшить</span></button>
                     <input class="date-input-field field" type="number" id="adults" name="adults"
-                      placeholder="1" value="2">
+                      placeholder="1" value="2" required>
                     <button class="btn-plus" type="button"><span
                         class="visually-hidden">Увеличить</span></button>
                   </div>
@@ -217,7 +218,7 @@
                     <button class="btn-minus" type="button">
                       <span class="visually-hidden">Минус</span></button>
                     <input class="date-input-field field" type="number" id="children" name="children"
-                      placeholder="1" value="2">
+                      placeholder="1" value="2" required>
                     <button class="btn-plus" type="button">
                       <span class="visually-hidden">Плюс</span></button>
                   </div>
