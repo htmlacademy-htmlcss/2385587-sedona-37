@@ -55,7 +55,7 @@ html {
   height: 100%;
 }
 
-main {
+.main-index {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -153,12 +153,12 @@ main {
   color: #82b3d3;
 }
 
-.menu-item-link:hover svg path {
+.menu-item-link:hover path {
   fill: #82b3d3;
 }
 
 .navigation-link:focus,
-.menu-item-link:focus svg  {
+.menu-item-link:focus {
   opacity: 0.3;
 }
 
@@ -431,21 +431,19 @@ main {
   font-style: normal;
 }
 
-.phone-link:hover, .phone-link:focus{
+.phone-link:hover, .phone-link:focus {
   color: #756157;
 }
 
-.phone-link:active svg path,.footer-logo-link:active svg path {
+.phone-link:active,
+.footer-logo-link:active {
   color: #756157;
   opacity: 0.3;
 }
 
-.footer-logo-link:hover svg path, .footer-logo-link:focus svg path {
+.footer-logo-link:hover path,
+.footer-logo-link:focus path {
   fill: #756157;
-}
-
-.footer-logo-link:active svg path {
-  fill: #7561574D;
 }
 
 .subscribe-email {
@@ -698,7 +696,7 @@ main {
   height: 52px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -706,7 +704,7 @@ main {
 
 .your-email {
   color: var(--basic-black, #000);
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -976,7 +974,7 @@ main {
   grid-column: 1/-1;
   -ms-grid-column-align:left;
       justify-self:left;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -1114,12 +1112,12 @@ main {
   padding: 0;
 }
 
-.social-list-item:hover svg path,
-.social-list-item:focus svg path {
+.social-list-item:hover path,
+.social-list-item:focus path {
   fill: #68A2CA;
 }
 
-.social-list-item:active svg path {
+.social-list-item:active path {
   fill: #68A2CA;
   opacity: 0.3;
 }
@@ -1333,7 +1331,7 @@ main {
   margin-left: auto;
   margin-right: 70px;
   position: relative;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   border: 2px solid #E5E5E5;
@@ -1530,7 +1528,7 @@ main {
 .modal-title {
   margin: 0;
   text-align: left;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -1819,7 +1817,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .date-input-field {
   color: #000;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
