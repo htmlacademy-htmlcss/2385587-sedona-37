@@ -6,6 +6,7 @@
 */
 
 
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -73,9 +74,8 @@ html {
           flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;;
-  height: 64px;
-
+          justify-content: center;
+  position: relative;
 }
 
 .navigation {
@@ -90,10 +90,9 @@ html {
 }
 
 .logo-link {
-  margin-right: 30px;
   width: 138px;
-  margin-bottom: -5px;
   z-index: 1;
+  position: absolute;
 }
 
 
@@ -115,12 +114,15 @@ html {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-height: 64px;
+  margin-left: 168px;
 }
 
 .navigation-item {
   position: relative;
   max-width: 100%;
   overflow: auto;
+  min-height: 64px;
 }
 
 .navigation-item.current::after {
@@ -181,7 +183,11 @@ html {
   margin-left: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-
+  height: 64px;
+  padding: 0;
+  margin: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .menu-link {
@@ -203,6 +209,7 @@ html {
 .menu-item {
   max-width: 100%;
   overflow: auto;
+  min-height: 64px;
 }
 
 .title {
@@ -459,7 +466,7 @@ html {
   background-position: center;
   background-size: cover;
   color: white;
-  height: 412px;
+  min-height: 412px;
   padding: 35px 70px 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1180,8 +1187,8 @@ html {
 
 .reasons-list-item, .advantages-list-item {
   width: 400px;
-  height: 385px;
-  padding: 0 85px;
+  min-height: 385px;
+  padding: 85px;
   background:rgba(131, 179, 211, 0.12);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1234,6 +1241,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 385px;
 }
 
 .advantages-list-item:nth-child(2) {
@@ -1866,7 +1874,7 @@ input[type="number"]::-webkit-outer-spin-button {
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   }
 
 .checkbox-item-label {
@@ -1916,6 +1924,8 @@ input[type="number"]::-webkit-outer-spin-button {
   border: none;
   background-color: #fff;
   margin-right: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .custom-radio::before {
@@ -1952,9 +1962,9 @@ input[type="number"]::-webkit-outer-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
 }
 
 .checkbox-item:hover, .radio-item:hover {
