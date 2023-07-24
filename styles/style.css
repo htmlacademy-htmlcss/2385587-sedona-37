@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -307,7 +300,6 @@ html {
   background-color: #FFFFFF;
 }
 
-
 .button {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
@@ -337,20 +329,21 @@ html {
   background-color: #82B3D3;
 }
 
-.button.blue.form {
+.form {
   border-radius: 0 4px 4px 0;
 }
+
 
 .button.blue:hover,.button.blue:focus,
 .small.blue:hover,.small.blue:focus,
 .big.blue:hover,.big.blue:focus {
-  background-color: #82b3d3;
-  color: #ffffff4d;
+  background-color: #68A2CA;
 }
 
-.small.blue:active {
-  background-color: #82B3D3;
-  color: #FFFFFF4D;
+.button.blue:active, .small.blue:active,.small.blue:active,
+.big.blue:active,.big.blue:active, .small.blue:active {
+  background-color:#82B3D3;
+  color: rgba(255, 255, 255, 0.30);
 }
 
 .big {
@@ -400,12 +393,17 @@ html {
   padding: 8px 50px;
   font-family: "PT Sans", sans-serif;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .button-default:hover {
   opacity: 0.6;
 }
 
+.button-default:active {
+  border-radius: 4px;
+  border: 3px solid #83B3D3;
+}
 .green {
   background-color:#7DB54F
 }
@@ -1509,8 +1507,8 @@ html {
   padding: 64px 70px;
   border-radius: 30px;
   background: #FFF;
-  -webkit-box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1646,19 +1644,19 @@ html {
   padding-left: 20px;
 }
 
-date-input-field:not(:-moz-placeholder-shown), .price-input:not(:-moz-placeholder-shown) {
+.date-input-field:not(:-moz-placeholder-shown), .price-input:not(:-moz-placeholder-shown) {
   outline: 2px solid #000000;
   color: #000000;
   background-color: #F2F2F2;
 }
 
-date-input-field:not(:-ms-input-placeholder), .price-input:not(:-ms-input-placeholder) {
+.date-input-field:not(:-ms-input-placeholder), .price-input:not(:-ms-input-placeholder) {
   outline: 2px solid #000000;
   color: #000000;
   background-color: #F2F2F2;
 }
 
-date-input-field:not(:placeholder-shown),
+.date-input-field:not(:placeholder-shown),
 .price-input:not(:placeholder-shown) {
   outline: 2px solid #000000;
   color: #000000;
@@ -2051,7 +2049,6 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box
 }
-
 
 .form-label-icon {
   position: relative;
